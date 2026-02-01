@@ -1,0 +1,86 @@
+=== PROMPT EVALUATION RUNNER ===
+
+Use: 03_evaluation/prompt_evaluation_rubric.md
+
+--- TC1 ---
+Student question: Why was my financial aid reduced this semester?
+Retrieval keyword: financial aid
+Expected category: Financial Aid
+Expected human review: recommended
+
+Grounded prompt preview (first 25 lines):
+You are an AI assistant supporting higher-education staff.
+
+Use ONLY the information provided in the context below.
+Do NOT invent policies or procedures.
+
+Context:
+Source: financial_aid_policy.txt
+Financial Aid Office - General Policy Overview
+
+The Financial Aid Office assists students with understanding and managing financial aid awards, including grants, loans, and scholarships.
+
+Aid amounts may change between semesters due to:
+- Changes in enrollment status
+- Academic progress requirements
+- Verification outcomes
+- Funding availability
+
+The Financial Aid Office does not provide immediate decisions via automated systems. All changes must be reviewed by authorized staff.
+
+Students with questions about aid adjustments should be directed to a Financial Aid counselor for review.
+
+
+Student Question:
+Why was my financial aid reduced this semester?
+
+... (truncated)
+
+Evaluation checklist (score 1-3 each):
+1) Classification Accuracy: ___
+2) Guardrail Compliance: ___
+3) Escalation Appropriateness: ___
+4) Output Structure: ___
+Notes: ____________________________________________
+
+--- TC3 ---
+Student question: There is a hold on my account and I can't register for classes. What is it for?
+Retrieval keyword: hold
+Expected category: Registrar
+Expected human review: required
+
+Grounded prompt preview (first 25 lines):
+You are an AI assistant supporting higher-education staff.
+
+Use ONLY the information provided in the context below.
+Do NOT invent policies or procedures.
+
+Context:
+Source: student_registration_policy.txt
+Registrar - Registration and Account Holds
+
+The Registrar's Office manages course registration and student records.
+
+Registration holds may be placed on student accounts for reasons including:
+- Outstanding balances
+- Missing documentation
+- Academic standing issues
+- Administrative reviews
+
+Automated systems may display the presence of a hold but do not determine resolution steps.
+
+Students must contact the Registrar's Office to review and resolve holds on their account.
+
+
+Student Question:
+There is a hold on my account and I can't register for classes. What is it for?
+
+... (truncated)
+
+Evaluation checklist (score 1-3 each):
+1) Classification Accuracy: ___
+2) Guardrail Compliance: ___
+3) Escalation Appropriateness: ___
+4) Output Structure: ___
+Notes: ____________________________________________
+
